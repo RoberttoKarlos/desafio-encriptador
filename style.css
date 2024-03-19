@@ -1,0 +1,223 @@
+/*-------------------------------------------------------------------------
+Diseño general del cuerpo
+-------------------------------------------------------------------------*/
+
+body {
+    background: linear-gradient(#D8DFE8, #acc7eb);
+    background-attachment: fixed;
+    font-family: Inter, sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+/*-------------------------------------------------------------------------
+Diseño de la cabecera
+-------------------------------------------------------------------------*/
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    padding: 2.5em;
+    background: #acc7eb;
+    margin-bottom: 1.5em;
+}
+
+.logo {
+    width: 9em;
+    height: 3em;
+}
+
+.cabecera nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    color: #0A3871;
+    font-weight: bold;
+}
+
+/*-------------------------------------------------------------------------
+Diseño de la sección de manejo de texto
+-------------------------------------------------------------------------*/
+
+.manejo-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    height: 540px;
+    margin: 0 3%;
+    padding-bottom: 15px;
+}
+
+.texto-usuario {
+    width: 100%;
+    height: 450px;
+    background: transparent;
+    border: 0;
+    border-radius: 15px;
+    font-size: 2em;
+    color: #0A3871;
+    box-sizing: border-box;
+    cursor:pointer;
+}
+
+.texto-usuario::placeholder {
+    color: #0A3871;
+}
+
+.condicion {
+    display: flex;
+    margin: 0.75em 0;
+}
+
+.condicion img {
+    margin-right: 0.8em;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton-encriptar,
+.boton-desencriptar {
+    width: 45%;
+    padding: 1em 1.5em;
+    font-size: 1.125em;
+    font-weight: bold;
+    border-radius: 24px;
+    border: solid #0A3871;
+    cursor:pointer;
+    transition: 1s all;    
+}
+
+.boton-encriptar {
+
+    background: #0A3871;
+    color: white;
+}
+
+.boton-desencriptar {
+    background: #CED4DA;
+    color: #0A3871;
+}
+
+.boton-encriptar:hover, .boton-desencriptar:hover {
+    transform: scale(1.1);
+}
+
+
+/*-------------------------------------------------------------------------
+Diseño de la sección del texto resultado
+-------------------------------------------------------------------------*/
+
+.texto-resultado {
+    width: 22%;
+    height: 480px;
+    background: white;
+    border-color: transparent;
+    border-radius: 15px;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Código para alterar la section del resultado*/
+.texto-resultado-nuevo {
+    width: 22%;
+    height: 540px;
+    background: white;
+    border-color: transparent;
+    border-radius: 15px;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.imagen-vacio {
+    width: 85%;
+}
+
+.mensaje-1 {
+    width: 85%;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #343A40;
+    text-align: center;
+    margin: 0.7em;
+}
+
+.mensaje-2 {
+    width: 85%;
+    color: #343A40;
+    text-align: center;
+    margin: 0.5em;
+}
+
+
+/*Diseño del párrafo y botón que reemplazan a la imagen y textos del cuadro de resultado*/
+.resultado {
+    width: 85%;
+    height: auto;
+    overflow-x: auto;
+    font-size: 1.5em;
+    color: #495057;
+    text-align: left;
+    margin: 0.7em;
+}
+
+.boton-copiar {
+    width: 80%;
+    padding: 1em 1.5em;
+    font-size: 1.125em;
+    font-weight: bold;
+    border-radius: 24px;
+    background: transparent;
+    color: #0A3871;
+    border: solid #0A3871;
+    cursor:pointer;
+    transition: 1s all;    
+}
+
+.boton-copiar:hover {
+    transform: scale(1.1);
+}
+
+/*-------------------------------------------------------------------------
+Diseño del pie de página
+-------------------------------------------------------------------------*/
+footer {
+    position: absolute;
+    width: 100%;
+}
+.firma {
+    width: 100%;
+    background: #0A3871;
+    color: #CED4DA;
+    padding: 10px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bolder;
+    position: fixed;
+    bottom: 0;
+}
+
+
+@media screen and (max-width:375px) {
+
+    body {
+        width: auto;
+        height: auto;
+    }
+    main, .cabecera, .firma {
+        width: 100%;
+    }
+}
